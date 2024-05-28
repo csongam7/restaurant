@@ -4,7 +4,8 @@
   "description": "Exercising wokring with packages by building a page for a restaurant",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "author": "csongam7",
   "license": "ISC",
