@@ -1,3 +1,3 @@
 export function aboutLoader(){
-    console.log("first")
+    const information = document.createElement('div');
 }

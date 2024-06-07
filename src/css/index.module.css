@@ -1,9 +1,9 @@
 body{
   overflow: hidden;
-  background-image: url('/assets/images/wallpaper/background.jpg');
-  height: 100vh;
+}
+
+.content{
   width: 100vw;
-  background-position-x: -20vw;
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 100vh;
+  background-color: blueviolet;
 }

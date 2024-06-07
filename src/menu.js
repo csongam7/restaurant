@@ -1,8 +1,10 @@
-import styles from './css/menu.module.css';
+import * as styles from './css/menu.module.css';
 
 export function menuLoader(){
 
     const content = document.getElementById('content');
+    //content.className = '';
+    content.className = styles[".content"];
 
     const pizzasDetails = [
     {name: "pepperoni", ingredients: ["Tomato souce", "Cheese", "Pepperoni"], price: 2500, imgSrc : "../assets/images/pizzas/pepperoni.png"},
@@ -44,11 +46,11 @@ export function menuLoader(){
         pizzas.appendChild(pizza);
 
         //adding styling to them
-        pizzas.id = 'pizzas';
-        pizza.classList.add = 'pizza';
-        pizzaImg.classList.add('pizza-img');
-        pizzaName.classList.add('pizza-name');
-        price.classList.add('price');
+        pizzas.id = styles["pizza"];
+        pizza.classList.add(styles["pizza"]);
+        pizzaImg.classList.add(styles["pizzaImg"]);
+        pizzaName.classList.add(styles["pizzaName"]);
+        price.classList.add(styles["price"]);
     }
     content.appendChild(pizzas);
 }

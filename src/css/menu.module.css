@@ -2,6 +2,17 @@
   size: 300px;
 }
 
-pizzas{
+.container{
+  background-color: greenyellow;}
+
+.pizzas{
+  display: grid;
+  width: 100vw;
+  height: 100vh;
   background-color: rgb(202, 16, 106);
+}
+
+.pizzaImg{
+  width: 30vw;
+  height: auto;
 }
