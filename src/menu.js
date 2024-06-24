@@ -4,7 +4,7 @@ export function menuLoader(){
 
     const content = document.getElementById('content');
     //content.className = '';
-    content.className = styles[".content"];
+   // content.className = styles[".content"];
 
     const pizzasDetails = [
     {name: "pepperoni", ingredients: ["Tomato souce", "Cheese", "Pepperoni"], price: 2500, imgSrc : "../assets/images/pizzas/pepperoni.png"},
@@ -17,7 +17,6 @@ export function menuLoader(){
     ]
 
     const pizzas = document.createElement("ul");
-    pizzas.id = "pizzas";
 
     for (let i = 0; i < pizzasDetails.length-1; i++){
 
@@ -46,11 +45,12 @@ export function menuLoader(){
         pizzas.appendChild(pizza);
 
         //adding styling to them
-        pizzas.id = styles["pizza"];
+        
         pizza.classList.add(styles["pizza"]);
         pizzaImg.classList.add(styles["pizzaImg"]);
-        pizzaName.classList.add(styles["pizzaName"]);
-        price.classList.add(styles["price"]);
+        //pizzaName.classList.add(styles["pizzaName"]);
+        // price.classList.add(styles["price"]);
     }
+    pizzas.classList.add(styles["pizzas"]);
     content.appendChild(pizzas);
 }

@@ -7,12 +7,23 @@
 
 .pizzas{
   display: grid;
+  gap: 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   width: 100vw;
   height: 100vh;
-  background-color: rgb(202, 16, 106);
+  background-color: rgb(190, 2, 242);
 }
 
 .pizzaImg{
-  width: 30vw;
+  width: 50vw;
   height: auto;
+}
+
+.content{
+  background-color: blueviolet;
+}
+
+.activeBtn{
+  background-image: linear-gradient(to right,
+  green 0% 33%, white 33% 66%, red 66% 100%);
 }

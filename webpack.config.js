@@ -1,51 +1,33 @@
 const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: {
-    index: './src/index.js',
-    menu: './src/menu.js',
-  },
+  mode: 'development',
+  entry: './src/index.js',
   output: {
-    filename: '[name].bundle.js', // Use [name] to generate a unique filename for each entry
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
-  plugins: [
-    new HTMLWebpackPlugin({
-      title: 'Restaurant',
-      template: './src/index.html',
-      filename: 'index.html',
-      minify: {
-        collapseWhitespace: true,
-        removeComments: true,
-        removeRedundantAttributes: true,
-        useShortDoctype: true,
-      },
-    }),
-  ],
   module: {
     rules: [
       {
-        test: /\.module\.css$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-            },
-          },
-        ],
-      },
-      {
         test: /\.css$/i,
-        exclude: /\.module\.css$/i,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(png|jpg|jpeg|gif|svg)$/i,
-        type: 'asset/resource',
+        use: ['style-loader', {
+          loader: 'css-loader',
+          options: {
+            modules: {
+              localIdentName: '[name]__[local]--[hash:base64:5]',
+            },
+            importLoaders: 1,
+          },
+        }],
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+  ],
 };
