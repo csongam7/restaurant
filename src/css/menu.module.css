@@ -27,18 +27,21 @@
     justify-items: center;
     width: 100vw;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(25vw, 1fr));
     gap: 1vw;
     position: relative;
     margin: 0 2vw;
 }
 
 .food{
+    position: relative;
     max-width: 25vw;
+    max-height: fit-content;
     border: 10px white solid;
     display: grid;
     align-items: center;
     text-align: center;
+    margin-bottom: 10vh;
 }
 
 .foodName{}

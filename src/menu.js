@@ -70,6 +70,10 @@ export function menuLoader(){
             foodIngredients.classList.add(styles['foodIngredients']);
             foodPrice.classList.add(styles['foodPrice'])
     
+            if(foodIngredients.textContent.length > 50){
+                foodIngredients.style.fontSize = '80%';
+            }
+
             food.appendChild(foodName);
             food.appendChild(foodImg);
             food.appendChild(foodIngredients);
