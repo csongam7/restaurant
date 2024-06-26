@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'JustAnotherHand';
+  src: url(/assets/fonts/Just_Another_Hand/JustAnotherHand-Regular.ttf);
+}
+
 .content{
     display: flex;
     height: fit-content;
@@ -11,6 +16,8 @@
 }
 
 .pizzaQuote{
+  font-family: 'JustAnotherHand';
+  font-size: calc(3vw + 3vh);
   position: relative;
   width: fit-content;
 }

@@ -2,8 +2,6 @@
 import * as styles from './css/menu.module.css';
 
 export function menuLoader(){
-
-
     const menuContainer = document.createElement('div');
     menuContainer.classList = (styles['container']);
     const foodGrid = document.createElement('div');
@@ -43,7 +41,7 @@ export function menuLoader(){
     pizzaBtn.addEventListener('click', () => selectTheMenu('pizzas'));
     drinkBtn.addEventListener('click', () => selectTheMenu('drinks'));
     dessertBtn.addEventListener('click', () =>  selectTheMenu('desserts'));
-
+    selectTheMenu();
     function buildTheMenu(data){
         foodGrid.innerHTML = '';
         data.forEach((foodItem) => {
@@ -52,37 +50,39 @@ export function menuLoader(){
             const food = document.createElement('div');
             const foodName = document.createElement('p');
             const foodImg = document.createElement('img');
-            const foodIngredients = document.createElement('p');
             const foodPrice = document.createElement('p');
     
             foodName.innerHTML = foodItem.name;
             foodImg.src = foodItem.image;
-            foodItem.ingredients.forEach((ingredient) => {
-                foodIngredients.append(`${ingredient}, `);
-                /*const listItem = document.createElement('li');
-                listItem.innerHTML = ingredient;
-                foodIngredients.appendChild(listItem)});*/})
+            
+            food.appendChild(foodName);
+            food.appendChild(foodImg);
+            if (foodItem.ingredients){
+                const foodIngredients = document.createElement('p');
+                foodItem.ingredients.forEach((ingredient) => {
+                    foodIngredients.append(`${ingredient}, `)
+                });
+                    food.appendChild(foodIngredients);
+                    if(foodIngredients.textContent.length > 50){
+                        foodIngredients.style.fontSize = '80%';
+                        foodIngredients.classList.add(styles['foodIngredients']);
+                    }
+            }
+            food.appendChild(foodPrice);
+
             foodPrice.innerHTML = foodItem.price;
     
             food.classList.add(styles['food']);
             foodName.classList.add(styles['foodName']);
             foodImg.classList.add(styles['foodImg']);
-            foodIngredients.classList.add(styles['foodIngredients']);
             foodPrice.classList.add(styles['foodPrice'])
-    
-            if(foodIngredients.textContent.length > 50){
-                foodIngredients.style.fontSize = '80%';
-            }
 
-            food.appendChild(foodName);
-            food.appendChild(foodImg);
-            food.appendChild(foodIngredients);
-            food.appendChild(foodPrice);
+            
             foodGrid.appendChild(food)
         })
     }
 
-    function selectTheMenu(food){
+    function selectTheMenu(food = 'pizzas'){
         let data = [];
         switch(food){
             case 'pizzas':
@@ -99,19 +99,20 @@ export function menuLoader(){
                 break;
             case 'drinks':
                 data = [
-                { name : 'Aperol Spritz', ingredients : ['Aperol', 'Prosecco', 'Soda'], price : 2790},
-                { name : 'Water 0.5L', ingredients:['100% Water :D'], price : 500},
-                { name : 'Coca-cola 0.33 L', ingredients:['100% Cola :D'], price : 790},
-                { name : 'Espresso', ingredients:['Coffee'], price: 600},
-                { name : 'Capuccino', ingredients:['Coffee', 'Milk'], price: 990}];
+                { name : 'Aperol Spritz', image: 'https://www.courvoisier.com/sites/default/files/styles/original/public/2021-12/12_Border_Spritz.png.webp?itok=1ij9qQaS', ingredients : ['Aperol', 'Prosecco', 'Soda'], price : 2790},
+                { name : 'Water 0.5L', image: 'https://sophiawater.com/wp-content/uploads/2019/11/stil-500ml.png', price : -500},
+                { name : 'Coca-cola 0.33 L', image:'https://www.birasprovisions.com/wp-content/uploads/2024/04/Coca-Cola-can-1.png.webp', price : -590},
+                { name : 'Espresso', image:'https://www.starbucksathome.com/sg/sites/default/files/styles/nutrition_instruction_image/public/2021-04/BlackCoffee_LongShadow_0_1_0%20%281%29.png?itok=wkv8XBvk', price: -600},
+                { name : 'Capuccino', image:'https://cdn.shopify.com/s/files/1/0319/0764/3436/products/traditional-cappuccino.png?v=1597269389', price: -990},
+                { name:'Italian lemonade', image:'https://oakbeveragesinc.com/wp-content/uploads/2024/03/Fonti-Di-Crodo-Lemon-OAK-Beverages-Inc.webp', price: -590}];
                 buildTheMenu(data);
                 break;
             case 'desserts':
                 data = [
-                    { name : 'Tiramisu', image:'', price : 1990},
-                    { name : 'Cannoli', image:'', price : 1990},
-                    { name : 'Bomboloni', image:'', price : 2690},
-                    { name : 'Profiterol', image:'', price : 1000}];
+                    { name : 'Tiramisu', image:'https://www.giuso.it/Media/Images/Prodotti/Gelateria/Linea_Variegati/Variegati_in_pasta/Variegato-tiramisu.png', price : -1690},
+                    { name : 'Cannoli', image:'https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/spgrmvha/f71ebd17-3c5e-4176-800f-4c5f81c981c6.png', price : -1490},
+                    { name : 'Bombolone', image:'https://dtgxwmigmg3gc.cloudfront.net/imagery/assets/derivations/icon/512/512/true/eyJpZCI6IjI5N2VhZWU3ZGE2MzkzZGJiY2E2YWU2YmIwNDcwMTcxLmpwZyIsInN0b3JhZ2UiOiJwdWJsaWNfc3RvcmUifQ?signature=37c54930e306f703cf9dd865f8f6cb135c39e93984040626c6d53dc9afacf235', price : -1290},
+                    { name : 'Profiterol', image:'https://orangecafe.hu/wp-content/uploads/2022/10/Profiterol-Nero.png', price : -1690}];
                 buildTheMenu(data);
                 break;
         }
