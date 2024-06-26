@@ -4,10 +4,10 @@
 }
 
 body{
+  display: flex;
+  flex-direction: column;
   font-family: 'PoetsenOne';
   position: relative;
-  margin: 0;
-  padding: 0;
   overflow: hidden;
   background: url('/assets/images/wallpaper/background.jpg');
   background-repeat: no-repeat;
@@ -17,9 +17,8 @@ body{
 }
 
 .content{
-  display: block;
+  display: flex;
   position: relative;
-  top: 40%;
   width: 35vw;
   color: white;
   left: 7%;

@@ -1,29 +1,60 @@
-.pizza{
-  size: 300px;
-}
-
 .container{
-  background-color: greenyellow;}
-
-.pizzas{
-  display: grid;
-  gap: 1fr;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(190, 2, 242);
+    width: 100vw;
+    display: grid;
+    position: relative;
+    height: 100vh;
+    grid-template-rows: min-content;
 }
 
-.pizzaImg{
-  width: 50vw;
-  height: auto;
+.menuBtn{
+    width: fit-content;
+    font-size: 0.6rem;
+    height: fit-content;
 }
 
-.content{
-  background-color: blueviolet;
+.menuNavigationContainer{
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
 }
 
-.activeBtn{
-  background-image: linear-gradient(to right,
-  green 0% 33%, white 33% 66%, red 66% 100%);
+.foodGrid{
+    justify-items: center;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 1vw;
+    position: relative;
+}
+
+.food{
+    border: 10px white solid;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+.foodName{}
+
+.foodImg{
+    height: 500px;;
+    width: auto;
+}
+
+.foodIngredients{
+    list-style: none;
+}
+
+.foodPrice{}
+
+.menuContent{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: flex-start;
+    align-items: baseline;
+    border: solid black 6px;
+    left: 0;
+    backdrop-filter: blur(5px);
 }

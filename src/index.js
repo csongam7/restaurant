@@ -3,7 +3,7 @@ import { homeLoader } from "./home";
 import { menuLoader } from "./menu";
 
 function loadPage(tab) {
-    const content = document.getElementById('content');
+    const content = document.querySelector('#content');
     content.innerHTML = '';
 
     const buttons = document.querySelectorAll('button');
@@ -34,11 +34,6 @@ function loadPage(tab) {
 
     // Add content class using CSS module
     content.classList.add(styles['content']);
-
-    // Example of adding content dynamically
-    const pizzaPlaceName = document.createElement('div');
-    pizzaPlaceName.textContent = "Pizza is the perfect food because it's the only food that you can eat with your hands and still look classy."; // Use textContent for text
-    content.appendChild(pizzaPlaceName);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
