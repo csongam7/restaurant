@@ -52,15 +52,16 @@ export function menuLoader(){
             const food = document.createElement('div');
             const foodName = document.createElement('p');
             const foodImg = document.createElement('img');
-            const foodIngredients = document.createElement('ul');
+            const foodIngredients = document.createElement('p');
             const foodPrice = document.createElement('p');
     
             foodName.innerHTML = foodItem.name;
             foodImg.src = foodItem.image;
             foodItem.ingredients.forEach((ingredient) => {
-                const listItem = document.createElement('li');
+                foodIngredients.append(`${ingredient}, `);
+                /*const listItem = document.createElement('li');
                 listItem.innerHTML = ingredient;
-                foodIngredients.appendChild(listItem)});
+                foodIngredients.appendChild(listItem)});*/})
             foodPrice.innerHTML = foodItem.price;
     
             food.classList.add(styles['food']);
