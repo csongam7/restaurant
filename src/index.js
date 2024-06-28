@@ -1,6 +1,7 @@
 import * as styles from "./css/index.module.css";
 import { homeLoader } from "./home";
 import { menuLoader } from "./menu";
+import { aboutLoader } from "./about";
 
 function loadPage(tab) {
     const content = document.querySelector('#content');
@@ -23,10 +24,10 @@ function loadPage(tab) {
             break;/*
         case 'contact':
             contactLoader();
-            break;
+            break;*/
         case 'about':
             aboutLoader();
-            break;*/
+            break;
     }
 
    
