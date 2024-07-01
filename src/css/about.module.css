@@ -1,10 +1,43 @@
 .content{
     width: 100vw;
     height: 100vh;
+    z-index: 1;
+    left: 0;
+    align-items: center;
+    align-content: center;
+    background-color: yellow;
 }
 
 .chef{
-    height: auto;
-    width: 50vw;
-    z-index: 2;
+    height: 50vh;
+    padding: 2rem 4rem;
+}
+
+.imageContainer{
+    border-width: 3px 4px 3px 5px;
+    border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+    transform: rotate(2deg);
+    margin:25px;
+    background-color: rgba(255, 255, 255, 0.847);
+    border: solid black;
+    border-color: black;
+    color: rgb(0, 0, 0);
+    font-size: 4.5vh;
+    text-shadow: 10px 10px 6px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(187, 8, 8, 0.3);
+    transition: ease-in-out .5s;
+}
+
+.imageContainer:hover{
+    font-size: 210%;
+}
+
+.chefName{
+    text-align: center;
+    border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+    margin: 25px;
+    border: solid black;
+    border-color: black;
+}
+
+.aboutBackground{
 }

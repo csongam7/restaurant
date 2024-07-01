@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'JustAnotherHand';
-  src: url(/assets/fonts/Just_Another_Hand/JustAnotherHand-Regular.ttf);
+  src: url(/src/assets/fonts/Just_Another_Hand/JustAnotherHand-Regular.ttf);
 }
 
 .content{

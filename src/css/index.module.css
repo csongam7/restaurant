@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'ItalianoRegular';
-  src: url(/assets/fonts/Just_Another_Hand/JustAnotherHand-Regular.ttf);
+  src: url(/src/assets/fonts/Italianno-Regular.ttf);
   font-family: 'PoetsenOne';
-  src: url(/assets/fonts/PoetsenOne-Regular.ttf);
+  src: url(/src/assets/fonts/PoetsenOne-Regular.ttf);
 }
 
 body{
@@ -11,7 +11,7 @@ body{
   font-family: 'PoetsenOne';
   position: relative;
   overflow: hidden;
-  background: url('/assets/images/wallpaper/background.jpg');
+  background: url('/src/assets/images/wallpaper/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -45,7 +45,7 @@ button{
   background-size: 300%;
   background-image: linear-gradient(to right,
   #000000 50%,
-  #ff0000 66%, white 83%,  green 100%);
+  green 66%, white 83%,  #ff0000 100%);
   background-position: 0 0 ;
 }
 
@@ -58,7 +58,7 @@ button.active{
   background-size: 300%;
   background-image: linear-gradient(to right,
   #000000 50%,
-  #ff0000 66%, white 83%,  green 100%);
+  green 66%, white 83%,  #ff0000 100%);
   background-position: right;
   color: black;
   border-color: white;
