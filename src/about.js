@@ -16,7 +16,7 @@ export function aboutLoader(){
     const middleContainer = document.createElement('div');
     const lowerContainer = document.createElement('div');
 
-    chef.src = csongam7;
+    chef.src="https://i.ibb.co/4FG9vQy/csongam7.png"
     chefName.innerHTML = 'csongam7';
 
     imageContainer.appendChild(chefName);

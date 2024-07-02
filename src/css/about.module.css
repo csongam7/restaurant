@@ -5,7 +5,7 @@
     left: 0;
     align-items: center;
     align-content: center;
-    background-color: yellow;
+    background-color: rgba(117, 138, 120, 0.696);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -31,6 +31,9 @@
 }
 
 .imageContainer, .infoContainer{
+    display: grid;
+    flex-wrap: nowrap;
+    justify-items: center;
     max-height: 80vh;
     min-width: fit-content;
     width: 30vw;
@@ -49,7 +52,7 @@
 }
 
 .infoContainer{
-    width: 50vw;
+    width: 45vw;
     transition: ease-in-out .3s;
     margin-right: 5vw;
     max-height: 20vh;
@@ -66,6 +69,7 @@
 }
 
 .chefName{
+    width: 60%;
     text-align: center;
     border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
     margin: 25px;
