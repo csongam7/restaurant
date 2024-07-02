@@ -5,6 +5,7 @@ import { aboutLoader } from "./about";
 
 function loadPage(tab) {
     const content = document.querySelector('#content');
+    content.classList = '';
     content.innerHTML = '';
 
     const buttons = document.querySelectorAll('button');

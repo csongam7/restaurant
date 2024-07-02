@@ -4,6 +4,7 @@
 }
 
 .content{
+  border: none;
     display: flex;
     height: fit-content;
     color: white;

@@ -1,5 +1,6 @@
 //import { version } from 'html-webpack-plugin';
 import * as styles from './css/menu.module.css';
+import * as buttonStyle from './css/index.module.css';
 
 export function menuLoader(){
     const menuContainer = document.createElement('div');
@@ -26,6 +27,10 @@ export function menuLoader(){
     pizzaBtn.classList.add(styles['menuBtn']);
     drinkBtn.classList.add(styles['menuBtn']);
     dessertBtn.classList.add(styles['menuBtn']);
+
+    pizzaBtn.id = 'pizzas';
+    drinkBtn.id = 'drinks';
+    dessertBtn.id = 'desserts';
 
     //add buttons to the container
     menuNavigationContainer.appendChild(pizzaBtn);
@@ -83,6 +88,13 @@ export function menuLoader(){
     }
 
     function selectTheMenu(food = 'pizzas'){
+        const buttons = document.querySelectorAll(`.${styles['menuBtn']}`);
+    buttons.forEach((button) => {if (button.id == `${food}`){
+        button.classList.add(buttonStyle['active']);
+    }
+    else{
+        button.classList.remove(buttonStyle['active']);
+    }})
         let data = [];
         switch(food){
             case 'pizzas':
