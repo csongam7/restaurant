@@ -1,5 +1,7 @@
 import * as styles from './css/home.module.css'
 export function homeLoader(){
+    document.addEventListener('DOMContentLoaded', () => {
+        document.body.classList.add('loaded')});
     const content = document.querySelector('#content')
     const pizzaQuote = document.createElement('div');
     pizzaQuote.classList.add(styles['pizzaQuote']);

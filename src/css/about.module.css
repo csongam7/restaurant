@@ -1,0 +1,83 @@
+.content{
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    left: 0;
+    align-items: center;
+    align-content: center;
+    background-color: rgba(117, 138, 120, 0.696);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.chef{
+    height: 50vh;
+    padding: 2rem 4rem;
+}
+
+.mainContainer{
+    display: grid;
+    width: 100vw;
+    height: 85vh;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.sideContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.imageContainer, .infoContainer{
+    display: grid;
+    flex-wrap: nowrap;
+    justify-items: center;
+    max-height: 80vh;
+    min-width: fit-content;
+    width: 30vw;
+    border-width: 3px 4px 3px 5px;
+    border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+    margin:25px;
+    margin-right: 0px;
+    background-color: rgba(255, 255, 255, 0.847);
+    border: solid black;
+    border-color: black;
+    color: rgb(0, 0, 0);
+    font-size: 4.5vh;
+    text-shadow: 10px 10px 6px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(187, 8, 8, 0.3);
+    transition: ease-in-out .2s;
+}
+
+.infoContainer{
+    text-shadow: none;
+    width: 45vw;
+    transition: ease-in-out .3s;
+    margin-right: 5vw;
+    max-height: 20vh;
+    font-size: calc(0.65vw + 1vh);
+    padding: 3%;
+}
+
+.imageContainer:hover{
+    font-size: 220%;
+}
+
+.infoContainer:hover{
+    font-size: calc(0.8vw + 1vh);
+}
+
+.chefName{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+    margin: 25px;
+    border: solid black;
+    border-color: black;
+}
+
+.aboutBackground{
+}

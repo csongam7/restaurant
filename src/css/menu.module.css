@@ -36,6 +36,7 @@
 }
 
 .food{
+    background-color: rgba(132, 53, 24, 0.379);
     position: relative;
     max-width: 25vw;
     max-height: fit-content;
@@ -58,7 +59,8 @@
     list-style: none;
 }
 
-.foodPrice{}
+.foodPrice{
+}
 
 .menuContent{
     width: 100vw;

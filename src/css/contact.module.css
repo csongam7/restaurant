@@ -1,0 +1,56 @@
+.bigText{
+    font-size: calc(2vw + 4vh);
+    color: rgba(0, 0, 0);
+    margin-left: 1vw;
+}
+
+.container{
+    width: 20vw;
+    min-width: fit-content;
+    font-size: calc(1vw + 2vh);
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 5rem;
+}
+
+.content{
+    grid-template-rows: repeat(3, 1fr);
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-items: center;
+    max-height: 80vh;
+    min-width: fit-content;
+    width: 40vw;
+    border-width: 3px 4px 3px 5px;
+    border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+    margin:25px;
+    margin-right: 0px;
+    background-color: rgba(255, 255, 255, 0.847);
+    border: solid black;
+    border-color: black;
+    color: rgb(0, 0, 0);
+    font-size: 4.5vh;
+    text-shadow: 10px 10px 6px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(187, 8, 8, 0.3);
+    transition: ease-in-out .2s;
+}
+
+.info{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    height: fit-content;
+    transition: ease-in-out .2s;
+}
+
+.info:hover{
+    font-size: 110%;
+}
+
+body{
+}
+
+.email:hover{}
+
+.location{}

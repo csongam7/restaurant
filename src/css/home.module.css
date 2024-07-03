@@ -1,9 +1,19 @@
 @font-face {
   font-family: 'JustAnotherHand';
-  src: url(/assets/fonts/Just_Another_Hand/JustAnotherHand-Regular.ttf);
+  src: url(/src/assets/fonts/Just_Another_Hand/JustAnotherHand-Regular.ttf);
+}
+
+body {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.visible{
+  opacity: 1;
 }
 
 .content{
+  border: none;
     display: flex;
     height: fit-content;
     color: white;
