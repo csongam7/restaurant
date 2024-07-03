@@ -3,6 +3,15 @@
   src: url(/src/assets/fonts/Just_Another_Hand/JustAnotherHand-Regular.ttf);
 }
 
+body {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.visible{
+  opacity: 1;
+}
+
 .content{
   border: none;
     display: flex;

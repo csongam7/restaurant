@@ -5,6 +5,15 @@
   src: url(/src/assets/fonts/PoetsenOne-Regular.ttf);
 }
 
+body {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.visible{
+  opacity: 1;
+}
+
 body{
   display: flex;
   flex-direction: column;

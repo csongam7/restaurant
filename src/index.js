@@ -2,6 +2,7 @@ import * as styles from "./css/index.module.css";
 import { homeLoader } from "./home";
 import { menuLoader } from "./menu";
 import { aboutLoader } from "./about";
+import { contactLoader } from "./contact";
 
 function loadPage(tab) {
     const content = document.querySelector('#content');
@@ -15,22 +16,22 @@ function loadPage(tab) {
     else{
         button.classList.remove(styles['active']);
     }})
-
+    document.querySelector('#content').addEventListener('DOMContentLoaded', () => {
+        document.body.classList.add(styles['visible'])});
     switch (tab) {
         case 'home':
             homeLoader();
             break;
         case 'menu':
             menuLoader();
-            break;/*
+            break;
         case 'contact':
             contactLoader();
-            break;*/
+            break;
         case 'about':
             aboutLoader();
             break;
     }
-
    
     
 

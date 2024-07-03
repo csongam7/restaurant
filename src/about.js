@@ -5,8 +5,6 @@ export function aboutLoader(){
 
     //build up the site
     const content = document.querySelector('#content');
-
-    
     const mainContainer = document.createElement('div');
     const imageContainer = document.createElement('div');
     const chef = document.createElement('img');

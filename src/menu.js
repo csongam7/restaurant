@@ -124,7 +124,7 @@ export function menuLoader(){
                     { name : 'Tiramisu', image:'https://www.giuso.it/Media/Images/Prodotti/Gelateria/Linea_Variegati/Variegati_in_pasta/Variegato-tiramisu.png', price : 1690},
                     { name : 'Cannoli', image:'https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/spgrmvha/f71ebd17-3c5e-4176-800f-4c5f81c981c6.png', price : 1490},
                     { name : 'Bombolone', image:'https://lenalubomboloni.com/cdn/shop/files/4.png?v=1682758798', price : 1290},
-                    { name : 'Profiterol', image:'https://orangecafe.hu/wp-content/uploads/2022/10/Profiterol-Nero.png', price : -1690}];
+                    { name : 'Profiterol', image:'https://orangecafe.hu/wp-content/uploads/2022/10/Profiterol-Nero.png', price : 1690}];
                 buildTheMenu(data);
                 break;
         }
