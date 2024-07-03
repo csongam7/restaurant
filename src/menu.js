@@ -112,7 +112,7 @@ export function menuLoader(){
             case 'drinks':
                 data = [
                 { name : 'Aperol Spritz', image: 'https://www.courvoisier.com/sites/default/files/styles/original/public/2021-12/12_Border_Spritz.png.webp?itok=1ij9qQaS', ingredients : ['Aperol', 'Prosecco', 'Soda'], price : 2790},
-                { name : 'Water 0.5L', image: 'https://sophiawater.com/wp-content/uploads/2019/11/stil-500ml.png', price : 500},
+                { name : 'Water 0.5L', image: 'https://sophiawater.com/wp-content/uploads/2019/11/stil-500ml.png', price : 490},
                 { name : 'Coca-cola 0.33 L', image:'https://www.birasprovisions.com/wp-content/uploads/2024/04/Coca-Cola-can-1.png.webp', price : 590},
                 { name : 'Espresso', image:'https://www.starbucksathome.com/sg/sites/default/files/styles/nutrition_instruction_image/public/2021-04/BlackCoffee_LongShadow_0_1_0%20%281%29.png?itok=wkv8XBvk', price: 600},
                 { name : 'Capuccino', image:'https://cdn.shopify.com/s/files/1/0319/0764/3436/products/traditional-cappuccino.png?v=1597269389', price: 990},
